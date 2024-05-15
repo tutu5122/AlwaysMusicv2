@@ -1,0 +1,54 @@
+{{> partials/navbar }}
+<h3><i class="bi bi-arrow-down-circle"></i> Administrador de Estudiantes</h3>
+<div class="contentTable">
+	<h3>formulario para ingresar estudiantes</h3>
+	<form id="formAgregarEstudiante" class="mt-2">
+		<div class="mb-3">
+			<label for="nombreAgregar" class="form-label">Nombre</label>
+			<input type="text" class="form-control" id="nombreAgregar" placeholder="Ingresa el nombre del estudiante" required>
+		</div>
+		<div class="mb-3">
+			<label for="rutAgregar" class="form-label">Rut</label>
+			<input type="text" class="form-control" id="rutAgregar" placeholder="Ingresa el rut del estudiante" required>
+		</div>
+		<div class="mb-3">
+			<label for="cursoAgregar" class="form-label">Curso</label>
+			<input type="text" class="form-control" id="cursoAgregar" placeholder="Ingresa el curso del estudiante" required>
+		</div>
+		<div class="mb-3">
+			<label for="nivelAgregar" class="form-label">Nivel</label>
+			<input type="text" class="form-control" id="nivelAgregar" placeholder="Ingresa el nivel del estudiante" required>
+		</div>
+		<button type="submit" class="btn btn-primary ">Guardar</button>
+	</form>
+	<h3>Estudiantes ingresados</h3>
+	<table class="table table-striped table-hover whiteSpace">
+		<thead>
+			<tr>
+				<th scope="col">Nombre del estudiante</th>
+				<th scope="col">Rut</th>
+				<th scope="col">Curso</th>
+				<th scope="col">nivel</th>
+			</tr>
+		</thead>
+		<tbody id="tablaEstudiantes">
+			<!-- Aquí se mostrarán los detalles del estudiante con su boton de eliminar y modificar -->
+		</tbody>
+	</table>
+	<div id="detallesEstudiante">
+		<!-- Aquí se mostrarán los detalles del estudiante -->
+	</div>
+
+	<div id="BuscarEstudiante" class="whiteSpace">
+		<h3>Buscar por Rut</h3>
+		<div class="mt-3">
+			<input type="text" class="form-control" id="inputRut" placeholder="Ingresa el rut">
+			<button class="btn btn-primary mt-3" id="btnBuscar">Buscar</button>
+		</div>
+		<div id="detallesRut">
+			<!-- Aquí se mostrarán los detalles del estudiante -->
+		</div>
+	</div>
+</div>
+
+{{> partials/footer}}
